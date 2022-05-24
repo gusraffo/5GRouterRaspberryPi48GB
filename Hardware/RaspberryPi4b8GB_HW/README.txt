@@ -14,4 +14,5 @@ https://www.raspberrypi.com/documentation/
 raspberryPi4B Hardware Documentation
 https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 
-Also Hardware diagrams can be found here.
+Processors used in the Raspberry Pi computers
+https://www.raspberrypi.com/documentation/computers/processors.html
