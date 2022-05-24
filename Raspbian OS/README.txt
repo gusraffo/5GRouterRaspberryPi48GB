@@ -8,3 +8,8 @@ https://www.raspberrypi.com/documentation/computers/os.html
 The config.txt file is in the boot partition FAT32 and it's the first file to be loaded.
 https://www.raspberrypi.com/documentation/computers/config_txt.html
 
+
+
+
+
+
