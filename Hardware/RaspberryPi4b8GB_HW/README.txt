@@ -16,3 +16,7 @@ https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 
 Processors used in the Raspberry Pi computers
 https://www.raspberrypi.com/documentation/computers/processors.html
+
+
+Datasheets can be found here:
+https://datasheets.raspberrypi.com/
