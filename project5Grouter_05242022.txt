@@ -155,14 +155,17 @@ Also 802.11ac protocol uses beamforming that transmits radio signals in such a w
 
 802.11ac protocol does not support WPA3 Security Protocol, but strong long passwords with symbols are sufficient to have Cyber Security. This is a good reason to migrate in the near future for WiFi6 802.11ax, specially with modern mobile devices with WiFi6 already since at least 2020.
 
+It is worth noting that 5GHz band is usually not as busy as 2.4 in busy city areas or apartment complex scenarios.
+
 
 WiFi6 protocol 802.11ax (not included by default in the RaspberryPi4B8GB)
 #########################################################################
 
-Though not included by default in the SoC System, all WiFi6 devices have URSEC homologation approved at this day. WiFi6E, which uses the 2.4,5 and 6GHz band
-are still not approved for homologation. 
+First of all this protocol is Triple-Band (2.4, 5 and 6 GHz).
 
-Modern Mobile Telephone Devices already have WiFi6 technology.
+Though not included by default in the SoC System, all WiFi6 devices have URSEC homologation in Uruguay approved by default if they are WiFi Alliance compliant. WiFi6E, which uses the 2.4,5 and 6GHz band are still not directly or explicitly approved for homologation. 
+
+Modern Mobile Telephone Devices already have WiFi6 technology as well as 4.5G LTE Advanced Pro.
 
 In the same way as the USB modem M.2 interface can be used for Mobile M.2 form factor chips, there are WiFi6 and WiFi6E M.2 form factor chips. This is 
 promising as the SoC System can be upgraded using a USB port with the corresponging WiFi6/WiFi6E M.2 chip.  
@@ -177,11 +180,9 @@ Other improvements on spectrum utilization (6GHz band) are better power-control 
 WPA3 WiFi6 802.11ax Security 
 ############################
 
-Pre-shared key WPA and WPA2 remain vulnerable to password cracking attacks if users rely on a weak password or passphrase. WPA passphrase hashes are seeded 
-from the SSID name and its length; rainbow tables exist for the top 1,000 network SSIDs and a multitude of common passwords, requiring only a quick lookup to speed up cracking WPA-PSK.
+Pre-shared key WPA and WPA2 remain vulnerable to password cracking attacks if users rely on a weak password or passphrase. WPA passphrase hashes are seeded from the SSID name and its length; rainbow tables exist for the top 1,000 network SSIDs and a multitude of common passwords, requiring only a quick lookup to speed up cracking WPA-PSK.
 
-Brute forcing of simple passwords can be attempted using the Aircrack Suite starting from the four-way authentication handshake exchanged during association 
-or periodic re-authentication.
+Brute forcing of simple passwords can be attempted using the Aircrack Suite starting from the four-way authentication handshake exchanged during association or periodic re-authentication.
 
 WPA3 replaces cryptographic protocols susceptible to off-line analysis with protocols that require interaction with the infrastructure for each guessed 
 password, supposedly placing temporal limits on the number of guesses.However, design flaws in WPA3 enable attackers to plausibly launch brute-force 
@@ -189,7 +190,7 @@ attacks (see Dragonblood attack).
 
 WPA3 SAE has a transition mode (sometimes called mixed mode) created to allow WPA2 clients to co-exist on the same SSID used for WPA3. Although WPA3 needs to have PMF set to Required, the STA can also set is as Enabled, so that the STA which is not compliant with either WPA3 or PMF can still connect seamlessly.
 
-WPA3 is not availbale in 802.11ac. It is included as an option in 802.11ax 
+WPA3 is not availbale in 802.11ac. It is included as an option so far only in 802.11ax. 
 
 
 
@@ -223,23 +224,23 @@ Gigabit Ethernet and USB 3.0
 
 Though there is a Gbps Ethernet interface in the Raspberry4B, there are limitations due to the cable connections and
 
-The pi4 requires all 8 wires in a network cable to be connected. GB speed (1000Base-T) requires 4 pairs. Cat.6, Cat.6a, Cat7 cables are recommended to obtain Gbps communication.
+The pi4 requires all 8 wires in a network cable to be connected. Gigabit Ethernet order speeds (1000Base-T) requires 4 pairs. 
 
-While Raspberry Pi 3 Model B+ added Gigabit Ethernet connectivity, throughput on Raspberry Pi 4 is free from the single shared USB 2.0 channel to the SoC.” 
-(https://www.raspberrypi.org/magpi/raspberry-pi-4-specs-benchmarks/)
+Cat.6, Cat.6a, Cat7 cables are recommended to obtain Gbps communication.
 
-To be more specific, the USB host controller is connected directly to the SoC via a PCIe bus. The Ethernet Controller is built directly in to the SoC.
+While Raspberry Pi 3 Model B+ added Gigabit Ethernet connectivity, throughput on Raspberry Pi 4 is free from the single shared USB 2.0 channel to the SoC.” To be more specific (https://www.raspberrypi.org/magpi/raspberry-pi-4-specs-benchmarks/), the USB host controller is connected directly to the SoC via a PCIe bus. The Ethernet Controller is built directly in to the SoC adn independent form the 4 USB ports.
 
 The Ethernet port, relocated to the top-right of the board, now offers full-speed network connectivity with no bottlenecks. 
 
-Two USB 3.0 ports, centre, offer high-speed connectivity for external devices including storage and accelerator hardware.
+Two USB 3.0 ports, centre, offer high-speed connectivity for external devices including storage and accelerator hardware like A.I. dongles.
 
 Two other USB 2.0 ports are situated next to the USB 3.0 ports. 
 
 Check the folling link to see specifications and testing resutls:
+https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf
 
 
-Harware and OS benefits
+Harware and OS benefits 
 #######################
 
 A) The Raspberry4B8GB is a powerful CPU with 4 Cores and 1 GPU, 8GB of RAM, as well as 4 USB ports and 1Gbps Ethernet port, plus 2 WiFi antennae of 2.4Ghz and 5GHz 802.11ac as well as Bluetooth 5.0. It has two 4K micro HDMI ports for two monitors and audio jack, as well as GPIO. It's a Long Term Evolution Hardware with excellent future proof
