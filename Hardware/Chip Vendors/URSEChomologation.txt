@@ -1,1 +1,29 @@
+The list of vendors for LTE M.2 form factor chips is really long if we consider the number of vendors and the different Category of mobile
+devices for LTE. This means that the homologation process, which is purelly administrative in Uruguay and can take up to 3 months, which is usually
+the time it takes. 
+
+Another problem is that the homologation process requires to present the documentation of homologation in another country and that is not allways
+straight forward.
+
+All these factors add time that is not predictable for the project to test a great number of chips and evaluate which ones perform better under
+the required specification of our project.
+
+A direct communication via an audience with URSEC is required to speed up this process.
+
+Homologation is a major show stopper in this kind of projects, not only in this one, but in any other LTE IoT project that may happen in Uruguay.
+
+I have already the homologation for the following chips approved and are the only ones that can be imported with a limit of 3 per year in total or in only one import. I can't remember exactly the limitation at the moment.
+
+Here is the list:
+
+
+From this list the Huawei M.2 HUAWEI ME906S-158 4G LTE/HPSA+ Mobile Broadband WWAN Module B1,B2,B3,B5 is the one that has already been imported for
+the first prototype.
+
+
+ME906S-158 LTE Module User Manual English Huawei Technologies
+https://fccid.io/QISME906S-158/User-Manual/UserManual-pdf-2594269
+
+
+
 
