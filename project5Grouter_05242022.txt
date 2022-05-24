@@ -16,66 +16,78 @@ gusraffo@gmail.com
 Mobile:+59899538198
 5/19/2022
 
+Contributor and integration expert:
+Eduardo Spremolla
+Personal Data not provided (insert here)
 
  
-############################################################################################################################################	
-Project 5G Router using Raspberry Pi 4B 8GB with LTE Advanced Pro external modem with antenas and 2 WiFi hotspots in 2.4Ghz and 5GHz 802.11ac
-#############################################################################################################################################
+#####################################################################################################################################################	
+Project 5G Router using Raspberry Pi 4B 8GB with LTE Advanced Pro external M.2 USB modem with antennas and 2 WiFi hotspots in 2.4Ghz and 5GHz 802.11ac
+#####################################################################################################################################################
 
-The Raspberry  has several USB ports. This means that with extension cables you can connect up to 4 modems and also a USB stick for remote keyboard and mouse
+The Raspberry4B8GB  has 2 USB2 ports + 2 USB3 ports, Gigabit Ethernet and Dual band WiFi 802.11ac. This means that with extension cables you can connect up to 2 USB3 M.2 form factor 4.5G/5G/WiFi6 modems. 
 
-The objective is to model a Urban/Rural 5G router, starting with a 4G Rel.8 compatible Huawei dongle, then a M.2 Huawei Cat 4 M.2 chip with external antenas. This antenas can be upgraded to two outdoor directional antenas,located outside a house or building with a pole, pointing at the mobile site sector closest to the house.
+Ideally a modem RASPI HAT connected via GPIO, with Sim slot, M.2 female adaptor for modems, external antennas for MIMO and GPS (embedded in the 4.5G/5G chips) and a USB adaptor to connect the HAT to the Raspberry.
 
-This antenas act as MIMO (Multiple Output Multiple Input) and hace to be placed at 90 degrees for spatial mutilpexing. Also one is at 45 degrees from the y axis and the other at -45 degrees.
+The objective is to model a Urban/Rural 5G router, starting with a 4G Rel.8 compatible Huawei dongle, then a M.2 Huawei Cat 4 (150/50 Mbps) M.2 chip with external antennas. This antenas can be upgraded to two outdoor directional antenas,located outside a house or building with a pole, pointing to the mobile site sector closest to the house when the house is in a rural area or suburban area far away from the site and with no line of sight. This generates a low signal to noise ratio and high modulation and high speeds are not achievable in LTE.
 
-The use of this System on a Chip (SoC) hardware has the benefit of giving great performance with very low cost in the order of 50 dollars + the cost of the
-USB adaptor/ RaspiHat, external antenas, roof antenas and M.2 form factor modem chips 4.5G/5G. 
+This roof Shaggy directional antennas act as Massive MIMO (Multiple Output Multiple Input) and have to be placed, at 45 degree angle to the pole and at 90 degrees between them for spatial mutilpexing. 
 
-The M.2 Modem Chips have ports for antenas as well as GPS for coorinates. Depending on the 4.5G categories and vendors, they have different capabilites
-and are compatible with the different 4.5G releases, from Rel.8 to Rel.13. This gives a gamma of prices to choose according to customer requirements or
-the price they are able to pay. In general they should be better than Huawei 4G/WiFi routers Rel.8 that are installed in urban/rural areas.
+The use of this System on a Chip (SoC) Raspberry hardware has the benefit of giving great performance (Highest spec Rasapberry) with small form factor, very low cost in the order of 50 dollars + the cost of the USB adaptor/RaspiHat, external antennas, roof antennas and M.2 form factor modem chips 4.5G/5G that are easily interchangeable by Tech Support Specialists to upgrade the systems. 
 
-The price of the 5G modems is still high, around US$ 300 and there is no sign that they will decrase due to global chip shortage and tensions between China/Taiwan. Taiwan has TMSC that produces the Snapdragon X55 5G sub6Ghz modems, that are used as a component for the M.2 chips of other manufactureres. 
+The M.2 Modem Chips have small ports for antenans as well as a GPS/GLONASS port for coodrinates. Depending on the 4.5G categories and vendors, they have different capabilites and are compatible with the different 4.5G releases, from Rel.8 to Rel.13. This gives a gamma of prices to choose according to customer requirements or the price they are willing to pay. In general they should be better than Huawei 4G/WiFi routers Rel.8 that are installed in urban/rural areas that can only use one Carrier Frecuency. Usually the ones that are busiest due to old terminal (75% REL.8) present in the LTE RAN.
+
+The price of the 5G modems is still high, around US$ 250 and there is no sign that they will decrase due to global chip shortage and tensions between China/Taiwan. Taiwan has TMSC that produces the Snapdragon X55 5G sub6Ghz modems, that are used as a component for the M.2 chips of other manufactureres. 
+
+Yesterday the USA president Jow Biden said that if China attacks Taiwan they will use military force to defend Taiwan and China replied: "Taiwan is an inalienable part of China's territory... there's no room for compromise or concession.The Taiwan question and the Ukraine issue are fundamentally different. To compare those two is absurd. We once again urge the US to abide by the One China principle."  
+
+https://www.bbc.com/news/world-asia-china-61548531
+
+This is not a good prospect for the Supply Chain of chips. There could be a blocade or a Military Conflict between China and USA and it's allies.
+
 
 
 Qualcomm Snapdragon Family
 ##########################
 
-Snapdragon family has the best modems for 5G and is standarized for Global bands in FDD and TDD technologies.
+Snapdragon family has the best chip componentes in the form of modems for 4.5G 5G and is standarized for Global bands in FDD and TDD technologies.Some versions are cheaper and are compatible with Europe, America, Japan only. A global chip is recommended, though it is fine to use European chips with the same bands and FDD LTE RAN technology.
 
-There are 2 important difference with the chips:
+There are 2 important difference with the 5G chips:
 
-1) One is in the range of sub6GHz, using bands from 600MHz to 2600MHz, 3500MHz band, WiFi 5GHz band (listen 
-before talk functionality to co-exist with WiFi devices and APs), 6Ghz band.
+1) The first 5G chip is in the range of sub6GHz, using bands from 600MHz to 2600MHz, 3500MHz band with up to 100MHz per operator available, WiFi 5GHz band with TDD anb listen before talk functionality to co-exist with WiFi devices and APs and the 6Ghz band that can also be asigned to WiFi6E 802.11ax.
 
-2) The other is the dual operation in Sub6GHz and higher frecuency bands of 25GHz and 50GHz. This are for Long Term Evolution and are designed for other
-environments where the mobile density is of thousands of devices one next to the other (Stadium, Arena, Big Capital city center, thousands of drones together)
+2) The other is the dual operation 5G chip in Sub6GHz and higher mmWave frecuency bands of 25GHz and 50GHz. This are for Long Term Evolution and are designed for other environments where the mobile density is of thousands of devices one next to the other (Stadium, Arena, Big Capital city center, thousands of drones together.
+
+Snapdragon X55 is very popular in M.2 chips from other manufacturers as the modem component.
+
+The mmWave chip is more expensive than the sub6GHz and it is not recommended in this project as it is not for long range fixed mobile services.
 
 
 
 System Description and benefits
 ###############################
 
-The micro SD card that is used to develop the Linux configuration, Python software including GUI, Routing, different setups and other network configurations 
-and can be cloned to have a mass scale production, given the fact that the RaspberryPi4B8GB with it peripherals is also a powerfull computer and will be provided as part of the customers solution.
+The micro SD card that is used to run Raspbian OS, develop the Linux configuration, Python software including GUI (web interface alternaive), Routing, different setups, zero tier vpn system, mqtt,  and other network configurations.
 
-The end user will have a Linux Operating System to use for connecting to the internet and work, edit video, edit audio, play games, connect hardware to the
-GPIO. It's highly versatile and that's why it was chosen. 
+The micro SD card can be cloned to have a mass scale production, given the fact that the RaspberryPi4B8GB with it peripherals is also a powerfull computer and will be provided as part of the customers solution.
 
-This is a SoC micro-computer with high specifications and it's a Long Term Evolution platform. It should be upgradable in terms of software and also
-as it is given as an Open Source Software it can be improved or modified by under the GNU General Public License as mentioned in the begging of this file. 
+There is a shortage of RaspberryPi 4 Hardware due to a massive lockdown in several east China cities due to Omicron Covid-19 and the supply chain is completly interrupted at the moment with no avialability.
 
-This system also gives the  possibility of remote logging into the Computer for Support issues that can be resolved remotely without sending support teams 
-onsite. 
+The end user will have as an option a Linux Operating System PC to use for connecting to the internet and work, edit video, edit audio, play games, connect hardware to the GPIO or watch Streaming or movies in 4K. 
 
-To reduce failure points only the Raspi4B8GB, the USB modem with M.2 Chip, external/roof antenas and Transformer of 5.1 Volts would be the main setup. An
-optional battery can be used to give power to the system in case of power grid failure, though the system would work only as a Router and not as a PC,
-because monitors are not usually connected to batteries. 
+This is a SoC micro-computer with high specifications and it's a Long Term Evolution platform. Newer hardware from Raspberry will probably be compatible to great extent at least in the concept design of the System. 
 
-It is recommended to use heat sinks and 1 or 2 shimmer fans to keep a low temperature in the CPU, GPU and RAM for the cases of high peak of data traffic or
-computer intensive applications that might run on the device.
+The Hardware is upgradable in terms of software and also as it is given as an Open Source Software it can be improved or modified by anyone under the GNU General Public License as mentioned in the begging of this file. 
 
-When boot happens the computer automatically updates and upgrades packages. This is important from the kernel cyber security and application cyber security.
+This system also gives the  possibility of remote logging into the Computer for Support issues that can be resolved remotely without sending support teams onsite. 
+
+The Zero Tier System can be used to create VPNs for different enterprises when several routers are used or for regular customers to access remotely to configure, troubleshoot, upgrade OS, load security patches remotely, MQTT client subscription and it will provide extra security in terms of the connectivity.
+
+To reduce failure points only the Raspi4B8GB, the USB modem with M.2 Chip (alternate Raspi HAT), external/roof antenas and Transformer of 5.1 Volts would be the main setup. An optional battery can be used to give power to the system via USB in case of power grid failure, though the system would work only as a Router and not as a PC, because monitors are not usually connected to batteries. 
+
+It is recommended to use heat sinks and 1 or 2 shimmer fans to keep a low temperature in the CPU, GPU and RAM for the cases of high peak of data traffic or computer intensive applications that might run on the device. The temperature of the system has to be checked during speed tests to verify that it will not cause the system to fail.
+
+When boot happens the computer will have a crontab to automatically run apt update && upgrades packages. This is important from the kernel cyber security and application cyber security. It will keep the system allways updated. Also a daily apt update && upgrade will be run with a daily reboot at night at an scheduled time.
 
 
 Cyber Security
@@ -83,56 +95,65 @@ Cyber Security
 
 Cyber Security will be prioritized in the design as it is the greatest risk for internet connection. 
 
-VPN connectivity with providers that protect the device IP address to the internet should be implemented whenever possible as an option and used always if it is not a problema for the internet access to sites. For example, in some cases the IP range of Uruguay is required to access sites or coporate VPN access thatuses geo-location or SMS authentication.
+VPN connectivity with providers that protect the device IP address to the internet should be considered to access internet whenever possible as an option and used always if it is not a problem for the internet access to sites. For example, in some cases the IP range of Uruguay is required to access sites or coporate VPN access that uses geo-location or SMS authentication. In these cases the VPN provider has to be turned off temporarily, but it should be configured to be turned on by default. 
 
-The ufw should be configured and activated to avoid all possible connection from the internet and only enabled manually by the user to allow access from official technical support. Connection to alarms or IP cameras is a topic that should be configured minimizing the remote IP addresses that can access the device.
+This might interfere with the Zero Tier System and it has to be theoretically analyzed and tested to achieve the best solution.
 
-If DynDns is used, it is very important to configure all the cyber security recommendations.
+The ufw should be configured and activated to avoid all possible unauthorized connection from the internet and only enabled manually by the user in the web interface to allow access from technical support specialists. 
 
-The same applies to apache2 web server.
+Connection to alarms or IP cameras is a topic that should be configured minimizing the remote IP addresses that can access the device, only allowing specific sites.
+
+If DynDns is used, it is very important to configure all the cyber security recommendations in terms of the user and administrator profiles.
+
+The same applies to apache2 web server. Rules have to be highly restrictive.
 
 All ports that are not required should be blocked and only opened manually if required, to avoid backdoors.
 
 The passwords used in the WiFi hot-spots should be long and generated randomly including letters, capital letters, numbers and characters.
 
+To reduce physical protection of the components, a case with antenna ports, fans and hardcase should be used whenever possible. A normal case might not be possible to use when a RaspiHat is used.
+
 
 Camera
 ######
 
-RaspberryPiB has a camera that can be used with the GPU to implement AI image recongition and be used to detect persons or object with great accuracy and 
-might be used as an extension of the system capablities for day and night vision in the case of the Camera V2.1. 
+RaspberryPiB has a camera that can be used with the GPU to implement A.I. image recongition and be used to detect persons or object with great accuracy.It can extend system capablities for day and night vision in the case of the Camera V2.1.  
 
-There are infinite applications that can be added developed by the internet provider, the user or third party and included in the connected system to expand 
-it's capabilities, which adds AI for Long Term Evolution.
+There are infinite applications that can be added developed by the internet provider, the user or third party and included in the connected system to expand it's capabilities, which adds AI for Long Term Evolution.
+
+The Bullseye distribution of RaspberryPi4b8GB has new packages to administer the OS resources, including the new GPU, to accelerate the development and inferation times of AI applications. There are many projects already developed open source for download.
+
+The camera has also NoIR in the 2.1 version that can be used for example to measure clorophile in plants or as night vision.
 
 
 Microphone and speakers
 #######################
 
-The Raspi has a 4-pole stereo audio with microphone option. It can be used as part of an AI system for detecting voice commands as well as play messages, music, videos, etc., just like a PC or mobile phone.
+The Raspi has a 4-pole stereo audio with microphone option. It can be used as part of an A.I. system for detecting voice commands as well as play messages, music, videos, etc., just like a PC or mobile phone.
 
 
 Two 4K Screen Support
 #####################
 
-The system support 2 micro HDMI cables to HDMI for monitors or TVs though only one can be used in 4K simultaneously. This gives the option to project a video in 4K while using a second monitor for PC tasks if required.
+The system support 2 micro HDMI cables to HDMI for monitors or TVs though only one can be used in 4K at one time. This gives the option to project a video in 4K in one TV while using a second monitor for PC tasks if required.
+
 
 8GB RAM
 *******
 
-The 8GB RAM is future proof for supporting Raspbian GUI and heavy tasks. The 4GB or 2GB options are not recommended for Long Term Evolution. It might save
-some money in the short term, but the device will not escalate in the long term, or will suffer performance issues in the OS. 
+The 8GB RAM is future proof for supporting Raspbian GUI and heavy tasks. The 4GB or 2GB options are not recommended for Long Term Evolution. It might save some money in the short term, but the device will not escalate in the long term, or will suffer performance issues in the Raspbian OS due to lack of memory.
+
+At this stage it is difficult to say if all the max speeds can be achieved due to bottlenecks in hardware design.
 
 
-WiFi 802.11ac protocol
-######################
+WiFi Dual-Band 802.11ac protocol
+################################
 
-802.11ac allows 256QAM modulation (8 bits/simbol), supports 8x160MHz (8x8MIMO) of spectral bandwidth to play with versus 4x40MHz in 802.11n. This gives 802.11ac a range of 
-speeds from 433 Mbps (megabits per second) up to several Gigabits per second. 
+The 802.11ac protocol allows 256QAM modulation (8 bits/simbol), supports 8x160MHz (8x8MIMO) of spectral bandwidth to play with versus 4x40MHz in 802.11n. This gives 802.11ac a range of speeds from 433 Mbps (megabits per second) up to several Gigabits per second. 
 
-Also 802.11ac uses beamforming that transmits radio signals in such a way that they’re directed at a specific device. This can increase overall throughput andmake it more consistent, as well as reduce power consumption. Beamforming can be done with smart antennae that physically move to track a device, or by modulating the amplitude and phase of the signals so that they destructively interfere with each other, leaving just a narrow, interference-free beam.
+Also 802.11ac protocol uses beamforming that transmits radio signals in such a way that they’re directed at a specific device. This can increase overall throughput and make it more consistent, as well as reduce power consumption. Beamforming can be done with smart antennae that physically move to track a device, or by modulating the amplitude and phase of the signals so that they destructively interfere with each other, leaving just a narrow, interference-free beam.
 
-802.11ac does not support WPA3 Security Protocol, but strong long passwords with symbols are sufficient to have Cyber Security. This is a good reason to migrate in the near future for WiFi6 802.11ax.
+802.11ac protocol does not support WPA3 Security Protocol, but strong long passwords with symbols are sufficient to have Cyber Security. This is a good reason to migrate in the near future for WiFi6 802.11ax, specially with modern mobile devices with WiFi6 already since at least 2020.
 
 
 WiFi6 protocol 802.11ax (not included by default in the RaspberryPi4B8GB)
