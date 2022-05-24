@@ -17,12 +17,79 @@ I have already the homologation for the following chips approved and are the onl
 Here is the list:
 
 
-From this list the Huawei M.2 HUAWEI ME906S-158 4G LTE/HPSA+ Mobile Broadband WWAN Module B1,B2,B3,B5 is the one that has already been imported for
+
+
+M.2 Cat.4 HUAWEI ME906s-158 LTE-A chip
+######################################
+
+Huawei M.2 HUAWEI ME906S-158 4G LTE/HPSA+ Mobile Broadband WWAN Module B1,B2,B3,B5 is the one that has already been imported for
 the first prototype.
 
+HUAWEI ME906s-158 For CE application (Technical Specification)
+https://techship.com/download/huawei-me906s-158-brief-datasheet/
 
 ME906S-158 LTE Module User Manual English Huawei Technologies
 https://fccid.io/QISME906S-158/User-Manual/UserManual-pdf-2594269
+
+Hardware Guide:
+https://www.paoli.cz/out/media/Huawei%20ME906s%20Hardware%20guide.pdf
+
+This version of the chip will be integrated into the Prototype in an USB3 device that has an M.2 female interface, a micro SIM CARD slot and two antennas for diversity (MIMO).
+
+
+TECHNICAL SPECIFICATION M.2 Cat.4 HUAWEI ME906s-158 
+###################################################
+
+General Features
+
+• LTE (FDD) B1/B2/B3/B5/B7/B8/B20/B28,all bands with
+diversity
+• DC-HSPA+/HSPA+/HSPA/WCDMA B1/B2/B5/B8, all bands
+with diversity
+• EDGE/GPRS/GSM 1900/1800/900/850 MHz
+• GPS/GLONASS: L1
+• MIMO
+LTE: DL 2*2 and 4*2 MIMO
+• Receive diversity
+ DC-HSPA+/HSPA+/HSPA/UMTS B1/B2/B5/B8
+
+Data Features
+
+• Supports MO / MT
+• Supports formats of PDU
+• Point-to-point and cell broadcast
+
+SMS Features
+Note: Please refer to the latest version of Hardware Guide about the
+specifications. Huawei reserves the right to make changes or
+improvements to any to the products without prior notice.
+
+Approvals & Certifications
+• GPRS: DL 85.6 kbps/UL 85.6 kbps
+• EDGE: DL 236.8 kbps/UL 236.8 kbps
+• WCDMA CS: DL 64 kbps/UL 64 kbps
+• WCDMA PS: DL 384 kbps/UL 384 kbps
+• HSPA+: DL 21.6 Mbps/UL 5.76 Mbps
+• DC-HSPA+: DL 42Mbps/UL 5.76 Mbps
+• LTE FDD: DL 150 Mbps/UL 50 Mbps @20M BW cat4
+
+Additional Features
+
+• GNSS: GPS Standalone, A-GPS, LTO, Glonass
+• SIM Hotswap
+• IPV6
+• BodySAR
+• Tunable Antenna
+
+Interfaces
+
+• Antenna interfaces x 2
+• M.2 Socket
+• Signal Control interface
+• USB 2.0 interface high speed
+• UICC interface
+• Power supply
+
 
 
 
