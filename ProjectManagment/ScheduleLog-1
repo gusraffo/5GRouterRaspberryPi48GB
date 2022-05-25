@@ -1,0 +1,21 @@
+Today is Wenesday the 24th of 2022.
+
+The actual status is the following:
+
+Raspi4b8GB running with RaspbianOS
+There have been issues with the SD card while experimenting in the OS that caused instability and the system became a little unstable.
+To solve those issues we are trying to burn new images of the OS Bulseye and start from scatch.
+This helped to improve performance and we will move slowly to the following stages.
+
+Following Stages:
+#################
+
+1) Install packages for the Huawei dongle modem. Modem maganger proved to be good for this dongle.
+2) Install other packages that might be necesary according with the documentation in the packages folder.
+3) Convert the WiFi 802.11c interfaces of 2.4 and 5GHz into hot spots.
+4) Route WiFi interfaces in a way that one works with modem manager and the other with the Ethernet port. This will create some sort of
+static load balancer. The devices connected to 2.4Ghz will go via Ethernet and the 5GHz devices via the Huawei LTE modem.
+
+
+Next stages to be defined...
+
