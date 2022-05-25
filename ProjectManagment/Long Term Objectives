@@ -1,0 +1,26 @@
+It is difficult at the moment to predict time lines.
+
+After presenting the prototype we will ask for resources in terms of human resources as well as micro computers, chips and other stuff required.
+
+Also there will be a need to activate 5 carriers in a production cell to test newer chips in 4.5G and later on 5G chips.
+
+
+Division of project areas and roles:
+
+Project Manager
+
+MQTT System Team
+Networking system Team
+Marketing Team
+Comercial Team
+DTD Team (RAN)
+Linux Team
+GUI Team
+Customer Support Team
+Chip research, homologation and import Team
+Lab and Production Testing Team
+
+All this project ideally will have an Agile approach with Sprints of two weeks. Requirements will not change durinf a sprint. Bugs will be
+tolareated and left for future releases. 
+
+
