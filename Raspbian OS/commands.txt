@@ -1,0 +1,11 @@
+List commands that can be usefull specifically for this product
+
+
+1) iw command is used for all WiFi config
+
+man iw #manual pages for the command
+
+sudo iw phy phy0 channels
+
+sudo iw wlan0 scan | grep freq
+
