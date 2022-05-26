@@ -1,0 +1,4 @@
+The following link to Raspberry Documentation can be handy and has several application related to the project
+
+https://www.raspberrypi.com/documentation/computers/configuration.html
+
