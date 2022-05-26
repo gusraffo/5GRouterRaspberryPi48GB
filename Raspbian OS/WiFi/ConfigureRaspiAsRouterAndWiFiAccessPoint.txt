@@ -31,7 +31,7 @@ This documentation was tested on a Raspberry Pi 3B running a fresh installation 
 
 
 
-Before you Begin
+1) Before you Begin
 
 Ensure you have administrative access to your Raspberry Pi. The network setup will be modified as part of the installation: local access, with screen and keyboard connected to your Raspberry Pi, is recommended.
 
@@ -86,15 +86,8 @@ Broadcast:10.37.130.255
 Gateway 10.37.130.253
 
 
+2) Install AP and Management Software
 
-
-
-
-
-
-
-
-Install AP and Management Software
 In order to work as an access point, the Raspberry Pi needs to have the hostapd access point software package installed:
 
 sudo apt install hostapd
