@@ -1,4 +1,70 @@
+################################################################################################################
+Configuration of WiFi interface as Access Point in the following link:
+https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point
+################################################################################################################
+
+
+There are two options for the WiFi Access point configuration:
+
+1) Setting up a Bridged Wireless Access Point
+
+The Raspberry Pi can be used as a bridged wireless access point within an existing Ethernet network. This will extend the network to wireless computers and devices.
+
+If you wish to create a standalone wireless network, consider instead setting up a routed access point.
+
+                                         +- RPi -------+
+                                     +---+ 10.10.0.2   |          +- Laptop ----+
+                                     |   |     WLAN AP +-)))  (((-+ WLAN Client |
+                                     |   |  Bridge     |          | 10.10.0.5   |
+                                     |   +-------------+          +-------------+
+                 +- Router ----+     |
+                 | Firewall    |     |   +- PC#2 ------+
+(Internet)---WAN-+ DHCP server +-LAN-+---+ 10.10.0.3   |
+                 |   10.10.0.1 |     |   +-------------+
+                 +-------------+     |
+                                     |   +- PC#1 ------+
+                                     +---+ 10.10.0.4   |
+                                         +-------------+
+A bridged wireless access point can be created using the inbuilt wireless features of the Raspberry Pi 4, Raspberry Pi 3 or Raspberry Pi Zero W, or by using a suitable USB wireless dongle that supports access point mode. It is possible that some USB dongles may need slight changes to their settings. If you are having trouble with a USB wireless dongle, please check the forums.
+
+This documentation was tested on a Raspberry Pi 3B running a fresh installation of Raspberry Pi OS Buster.
+
+
+2) Setting up a Routed Wireless Access Point
+
+
+A Raspberry Pi within an Ethernet network can be used as a wireless access point, creating a secondary network. The resulting new wireless network is entirely managed by the Raspberry Pi.
+
+If you wish to extend an existing Ethernet network to wireless clients, consider instead setting up a bridged access point.
+
+                                         +- RPi -------+
+                                     +---+ 10.10.0.2   |          +- Laptop ----+
+                                     |   |     WLAN AP +-)))  (((-+ WLAN Client |
+                                     |   | 192.168.4.1 |          | 192.168.4.2 |
+                                     |   +-------------+          +-------------+
+                 +- Router ----+     |
+                 | Firewall    |     |   +- PC#2 ------+
+(Internet)---WAN-+ DHCP server +-LAN-+---+ 10.10.0.3   |
+                 |   10.10.0.1 |     |   +-------------+
+                 +-------------+     |
+                                     |   +- PC#1 ------+
+                                     +---+ 10.10.0.4   |
+                                         +-------------+
+A routed wireless access point can be created using the inbuilt wireless features of the Raspberry Pi 4, Raspberry Pi 3 or Raspberry Pi Zero W, or by using a suitable USB wireless dongle that supports access point mode. It is possible that some USB dongles may need slight changes to their settings. If you are having trouble with a USB wireless dongle, please check the forums.
+
+This documentation was tested on a Raspberry Pi 3B running a fresh installation of Raspberry Pi OS Buster.
+
+
+
+					 
+The ZTE Antel Modems use Gigabit Ethernet in the 192.168.1.0/24 IP range.
+
+
+
+
 wlan0 commands examples
+#######################
+
 
 NAME
        iw - show / manipulate wireless devices and their configuration
