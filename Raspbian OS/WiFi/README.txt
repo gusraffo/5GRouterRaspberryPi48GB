@@ -8,7 +8,8 @@ There are two options for the WiFi Access point configuration:
 
 1) Setting up a Bridged Wireless Access Point
 
-The Raspberry Pi can be used as a bridged wireless access point within an existing Ethernet network. This will extend the network to wireless computers and devices.
+The Raspberry Pi can be used as a bridged wireless access point within an existing Ethernet network. 
+This will extend the network to wireless computers and devices.
 
 If you wish to create a standalone wireless network, consider instead setting up a routed access point.
 
@@ -25,7 +26,10 @@ If you wish to create a standalone wireless network, consider instead setting up
                                      |   +- PC#1 ------+
                                      +---+ 10.10.0.4   |
                                          +-------------+
-A bridged wireless access point can be created using the inbuilt wireless features of the Raspberry Pi 4, Raspberry Pi 3 or Raspberry Pi Zero W, or by using a suitable USB wireless dongle that supports access point mode. It is possible that some USB dongles may need slight changes to their settings. If you are having trouble with a USB wireless dongle, please check the forums.
+A bridged wireless access point can be created using the inbuilt wireless features of the Raspberry Pi 4, 
+Raspberry Pi 3 or Raspberry Pi Zero W, or by using a suitable USB wireless dongle that supports access point mode. 
+It is possible that some USB dongles may need slight changes to their settings. If you are having trouble with a 
+USB wireless dongle, please check the forums.
 
 This documentation was tested on a Raspberry Pi 3B running a fresh installation of Raspberry Pi OS Buster.
 
@@ -33,7 +37,8 @@ This documentation was tested on a Raspberry Pi 3B running a fresh installation 
 2) Setting up a Routed Wireless Access Point
 
 
-A Raspberry Pi within an Ethernet network can be used as a wireless access point, creating a secondary network. The resulting new wireless network is entirely managed by the Raspberry Pi.
+A Raspberry Pi within an Ethernet network can be used as a wireless access point, creating a secondary network. The resulting 
+new wireless network is entirely managed by the Raspberry Pi.
 
 If you wish to extend an existing Ethernet network to wireless clients, consider instead setting up a bridged access point.
 
@@ -50,14 +55,33 @@ If you wish to extend an existing Ethernet network to wireless clients, consider
                                      |   +- PC#1 ------+
                                      +---+ 10.10.0.4   |
                                          +-------------+
-A routed wireless access point can be created using the inbuilt wireless features of the Raspberry Pi 4, Raspberry Pi 3 or Raspberry Pi Zero W, or by using a suitable USB wireless dongle that supports access point mode. It is possible that some USB dongles may need slight changes to their settings. If you are having trouble with a USB wireless dongle, please check the forums.
+A routed wireless access point can be created using the inbuilt wireless features of the Raspberry Pi 4, Raspberry Pi 3 or 
+Raspberry Pi Zero W, or by using a suitable USB wireless dongle that supports access point mode. It is possible that some 
+USB dongles may need slight changes to their settings. If you are having trouble with a USB wireless dongle, please check the forums.
 
 This documentation was tested on a Raspberry Pi 3B running a fresh installation of Raspberry Pi OS Buster.
 
 
+Router Option Prefered
+######################
 
+If you wish to extend an existing Ethernet network to wireless clients, consider instead setting up a bridged access point.
+
+To have a Private LAN in the Raspberry and only the connectivity via Ethernet or/and LTE it is the preferred option and it will be 
+investigated and teste in the first place. It should give extra benefits in terms of cyber security as it will be behind a NAT and also
+the Routing can be better to choose the Gateway of last ressort to have differnt precedence between Eth0 and LTE. 
+
+Other topics like firewall in the LAN can be taken into consideration as an advantage and last but not least the fact that there might
+be a chance of load balancing taking into consideration different sessions.
+
+
+ZTE Modem
+#########
 					 
 The ZTE Antel Modems use Gigabit Ethernet in the 192.168.1.0/24 IP range.
+
+
+
 
 
 
