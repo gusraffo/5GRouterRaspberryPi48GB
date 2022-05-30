@@ -4,6 +4,30 @@ The instructions are in the following link:
 https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point
 
 
+
+
+###########################################################################
+Official documentation did not work
+trying the following link
+https://anooppoommen.medium.com/create-a-wifi-hotspot-on-linux-29349b9c582d
+similar steps but uses "iw" command.
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Setting up a Routed Wireless Access Point
 Edit this on GitHub
 
