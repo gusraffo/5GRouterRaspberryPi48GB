@@ -7,10 +7,30 @@ https://www.raspberrypi.com/documentation/computers/configuration.html#setting-u
 
 
 ###########################################################################
-Official documentation did not work
+5/31/2022 by gusraffo@gmail.com
+
+Official documentation did not work as expected in router mode.
 trying the following link
+
 https://anooppoommen.medium.com/create-a-wifi-hotspot-on-linux-29349b9c582d
+
 similar steps but uses "iw" command.
+
+After trying different configurations we ended up with a bridged interface
+br0 between the WiFi and the Eth0. It worked fine so we are backing up config.
+
+As we were trying different options on the fly the strict configuration result
+might not be 100% accurate so we decided to take a snapshot of the system.
+
+We will analyze it in depth and track all the files that have been configured
+so we can have a sample of the configuration working and the files to be used
+in case it needs to be added one by one.
+
+At this point we will try now to configure the bridged via LTE dongle in a
+differente file. It will imply some changes to the config files.
+
+So
+
 ###########################################################################
 
 
