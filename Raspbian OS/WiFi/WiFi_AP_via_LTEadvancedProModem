@@ -1,0 +1,60 @@
+WiFi hotspot via LTE Advanced Pro 4.5 Huawei M.2 form factor USB modem
+######################################################################
+
+
+We were able to create a bridge between wiFi AP and Ethernet Gigabit interface, so there was internet access for the AP clients.
+
+The only roblem of this solution is that the RaspberriPi lost connectivity via the Ethernet. To solve this issue, the br0 interface to eth0 
+was deleted and it solves the issue, but leaves the AP with no internet. At the moment, this issue is not a major problem.
+
+Now the objective is to change the configuration files that were used to change eth0 by the usb modem interface. We list the interfaces in the system
+to start the process of replacing the configuration. The IP address of the LTE dongle is given by the vEPC mobile Core and it is not a fixed IP.
+That is a difference between the actual configuration in eth0 where the IP addressed was sticky to the MAC address of the eth0.
+
+
+
+pi@raspberrypi:~ $ sudo ifconfig
+br0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::e65f:1ff:fea7:25e4  prefixlen 64  scopeid 0x20<link>
+        ether e4:5f:01:a7:25:e6  txqueuelen 1000  (Ethernet)
+        RX packets 1098  bytes 193271 (188.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 51  bytes 6421 (6.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether e4:5f:01:a7:25:e4  txqueuelen 1000  (Ethernet)
+        RX packets 2205  bytes 1873767 (1.7 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1624  bytes 175504 (171.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 6345  bytes 411740 (402.0 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6345  bytes 411740 (402.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.10  netmask 255.255.255.0  broadcast 192.168.0.255
+        ether e4:5f:01:a7:25:e6  txqueuelen 1000  (Ethernet)
+        RX packets 1072  bytes 176602 (172.4 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 481  bytes 80077 (78.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wwan0: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1500
+        inet 10.90.52.26  netmask 255.255.255.252  broadcast 10.90.52.27
+        ether 76:59:fd:3f:a9:ed  txqueuelen 1000  (Ethernet)
+        RX packets 110824  bytes 96140605 (91.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 120424  bytes 123150963 (117.4 MiB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+
+
+wwan0 is the LTE m.2 Huawei chip IP address 10.90.52.26/30 and the DG should be 10.90.52.25
+
