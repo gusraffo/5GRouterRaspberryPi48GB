@@ -23,3 +23,12 @@ For simplification and to incorporate this to the final system as a normal conne
 use the GUI version of the app.
 
 
+
+Initial Result
+##############
+
+Modem Manager worked with the Huawei M.2 form factor Huawei Chip and the USB adator with the SIM Slot.
+
+Connection of the two antennas and the configuration of a connection APN antel.lte and International Code 78401 with *99# with no user and password worked smoothly and the web browser is working in the internet.
+
+Some pictures with the design are shown in this folder.
