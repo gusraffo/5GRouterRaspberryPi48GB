@@ -1,6 +1,8 @@
-This file is part of 5GRaspi4B8GBRouter
+5GRaspi4B8GBRouter Project
+##########################
 
-5GRaspi4B8GBRouter is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+5GRaspi4B8GBRouter is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License v3.0as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 5GRaspi4B8GBRouter is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
 without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
@@ -18,7 +20,11 @@ Mobile:+59899538198
 
 Contributor and integration expert:
 Eduardo Spremolla
-Personal Data not provided (insert here)
+Personal Data not provided 
+
+Contributor and Solution Architect
+Luis Stabile
+Personal Data not provided
 
  
 #####################################################################################################################################################	
@@ -29,7 +35,7 @@ The Raspberry4B8GB  has 2 USB2 ports + 2 USB3 ports, Gigabit Ethernet and Dual b
 
 Ideally a modem RASPI HAT connected via GPIO, with Sim slot, M.2 female adaptor for modems, external antennas for MIMO and GPS (embedded in the 4.5G/5G chips) and a USB adaptor to connect the HAT to the Raspberry.
 
-The objective is to model a Urban/Rural 5G router, starting with a 4G Rel.8 compatible Huawei dongle, then a M.2 Huawei Cat 4 (150/50 Mbps) M.2 chip with external antennas. This antenas can be upgraded to two outdoor directional antenas,located outside a house or building with a pole, pointing to the mobile site sector closest to the house when the house is in a rural area or suburban area far away from the site and with no line of sight. This generates a low signal to noise ratio and high modulation and high speeds are not achievable in LTE.
+The objective is to model a Urban/Rural 5G router, starting with a 4G Rel.8 compatible Huawei dongle, then upgrade to a USB adapter with an M.2 Huawei Cat 4 (150/50 Mbps) M.2 chip with external antennas. This antenas can be upgraded to two outdoor directional antenas,located outside a house or building with a pole, pointing to the mobile site sector closest to the house when the house is in a rural area or suburban area far away from the site and with no line of sight. This generates a low signal to noise ratio and high modulation and high speeds are not achievable in LTE.
 
 This roof Shaggy directional antennas act as Massive MIMO (Multiple Output Multiple Input) and have to be placed, at 45 degree angle to the pole and at 90 degrees between them for spatial mutilpexing. 
 
