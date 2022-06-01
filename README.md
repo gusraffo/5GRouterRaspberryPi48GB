@@ -1,6 +1,6 @@
 # 5GRouterRaspberryPi48GB
 
-This project is under the GNU license so it can be used as or modified as required. It serves as a platform for all the IoT enthusiasts that require a platform for connectivity to implment IoT projects. It is an IoT project itself but the objetive is give to the user/developer with the mobile 
+This project is under the GNU General Public License v3.0, so it can be used as or modified as required. It serves as a platform for all the IoT enthusiasts that require a platform for connectivity to implment IoT projects. It is an IoT project itself but the objetive is give to the user/developer with the mobile 
 communication solution that can be later on used for private projects like for example companes that want to provide home connectivity and control all 
 the devices remotley via mosquito mqtt and ZeroTier System VPN. 
 
