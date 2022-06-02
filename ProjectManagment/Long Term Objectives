@@ -2,8 +2,9 @@ It is difficult at the moment to predict time lines.
 
 After presenting the prototype we will ask for resources in terms of human resources as well as micro computers, chips and other stuff required.
 
-Also there will be a need to activate 5 carriers in a production cell to test newer chips in 4.5G and later on 5G chips.
-
+Also there will be a need to activate 5 carriers in a production cell to test newer chips in 4.5G and later on 5G chips in real scenatios. As there
+is a homlogation by URSEC for the chips there should be no issues that affect other users. The tests will be carried at a low peak houur after 9pm 
+when most customers are in their houses with FTTH and the WiFi network.
 
 Division of project areas and roles:
 
@@ -20,7 +21,7 @@ Customer Support Team
 Chip research, homologation and import Team
 Lab and Production Testing Team
 
-All this project ideally will have an Agile approach with Sprints of two weeks. Requirements will not change durinf a sprint. Bugs will be
+All this project ideally will have an Agile approach with Sprints of one week. Requirements will not change during a sprint. Bugs will be
 tolareated and left for future releases. 
 
 
