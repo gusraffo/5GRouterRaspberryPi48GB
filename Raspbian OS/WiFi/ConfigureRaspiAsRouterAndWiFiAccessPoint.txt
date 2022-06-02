@@ -29,7 +29,7 @@ in case it needs to be added one by one.
 At this point we will try now to configure the bridged via LTE dongle in a
 differente file. It will imply some changes to the config files.
 
-So
+We will add a folder with all the configuration files that were configured.
 
 ###########################################################################
 
