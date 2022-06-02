@@ -28,12 +28,16 @@ https://www.statista.com/statistics/787755/global-cellular-iot-module-shipments-
 
 The main ones are:
 
-Quectel
-Fibocom
-SimCom
-Telit
-Huawei
-SierraWireless
+Quectel           https://quectel.com/
+Fibocom           https://www.fibocom.com/
+SimCom            https://www.simcom.com/
+Telit             https://www.telit.com/
+Huawei            https://www.huawei.com/en/
+SierraWireless    https://www.sierrawireless.com/
+
+The officil web pages can be used to searh for IoT cellular and WiFi6 modules form factor M.2. There you can find modern chips that
+are compatible with the latest release of 4.5G LTE Advanced Pro, including, LTE-M and NbIoT. There are also 5G chip options that are
+more expesive but they are also M.2 interface compatible, so they can be used to evolve easily from 4.5G to 5G.
 
 They have differences in the way they implement IoT Cloud but the M.2 chips are similar. Only the price or availability can have an impact. 
 
