@@ -14,6 +14,26 @@ PRCOCEDURE
 
 https://anooppoommen.medium.com/create-a-wifi-hotspot-on-linux-29349b9c582d
 
+The Raspberry Pi can be used as a bridged wireless access point within an existing Ethernet network. This will extend the network to wireless computers and devices.
+
+If you wish to create a standalone wireless network, consider instead setting up a routed access point.
+
+                                         +- RPi -------+
+                                     +---+ 10.10.0.2   |          +- Laptop ----+
+                                     |   |     WLAN AP +-)))  (((-+ WLAN Client |
+                                     |   |  Bridge     |          | 10.10.0.5   |
+                                     |   +-------------+          +-------------+
+                 +- Router ----+     |
+                 | Firewall    |     |   +- PC#2 ------+
+(Internet)---WAN-+ DHCP server +-LAN-+---+ 10.10.0.3   |
+                 |   10.10.0.1 |     |   +-------------+
+                 +-------------+     |
+                                     |   +- PC#1 ------+
+                                     +---+ 10.10.0.4   |
+                                         +-------------+
+
+
+
 Create A WiFi Hotspot On Linux
 An in-depth tutorial on creating a hotspot in Linux
 
