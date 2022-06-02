@@ -24,4 +24,8 @@ Important due to increased security and anonimity
 
 Modem manager is used initialy for the Huawei LTE dongle to start with configuration while waiting for M.2 chips homologation and import times. 
 
-4) 
+4) vim
+
+Vim Editor
+
+
