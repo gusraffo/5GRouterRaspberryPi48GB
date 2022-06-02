@@ -2,14 +2,21 @@ Progress report:
 ################
 
 1) I am using now a RaspberryPi400 which is a Raspi 4 with 4GB of memory and it is inside a keyboard embedded. This is more handy to work.
+
 2) I had to burn several times the images while trying to set the Raspi4 as a Router with a WiFi AP.
-3) Finally I abandoned this path to make a smaller step that turns the Raspi4 in a WiFi AP bridged to the eth0 with success
-4) The mobile device was able to connect to the raspi4 AP name pi with passphrase raspberry and traffic via eth0
+
+3) Finally I abandoned this path to make a smaller step that turns the Raspi4 in a WiFi AP bridged to the eth0 with success.
+.
+4) The mobile device was able to connect to the raspi4 AP name pi with passphrase raspberry and traffic via eth0.
+
 5) The problem is that the local user is locked out of internet due to the bridged connection. For that I have to disconnect the br0 from the
 eth0 when I boot the system or at any time adding it back for testing. This is not idel but it helped proved that the WiFi AP works.
+
 6) The Huawei M.2 chip arrived and on the same day I was able to connect to the internet with the modem manager GUI with a simple coniguration of APN 
-and Mobile Networrk ID 78401, with *99# and no user or password
+and Mobile Networrk ID 78401, with *99# and no user or password.
+
 7) The eth0 cable was disconnected and the LTE dongle 4.5G Huawei with USB adaptor worked fine.
+
 8) The data rates were tested and they are similar to the mobile devices but I am in the site under the antennas and it is not a great location for
 good speed.
 
@@ -17,10 +24,26 @@ To summarize: The WiFi hotspot works, in a really basic form as there is no conf
 channels, even different bands. In terms of the bridge Br0 it worked fine via eth0. The m.2 chip is working find with navigation on the internet
 so now we will proceed to make a bridge from the WiFi AP to the LTE-A Huawei modem to give the WiFi AP mobile connectivity.
 
+The collaborator Eduardo Sremolla expertise in linux embedded devices has been of great importance for the success so far in the project steps. 
 
-Objectives for next steps:
-##########################
+
+Objectives for next sprint (one week closing Friday 06102022)
+#############################################################
 
 1) Aquire two Shaggy antennas and cable 50 ohms with adequate connectors to mount on the house roof and test the high gain directional antennas.
-2) configure the WiFi AP to traffic data via the Mobile access.
-3)
+
+2) Configure the WiFi AP to traffic data via the Mobile access using a briged interface.
+
+3) Try to solve the Router mode for the WiFi AP so that routing can be used instead of bridged connection. ( If this is achieved it will be of great 
+future features that can be added like proper Firewall, ZeroTier VPN, prefered Gateway, Gateway of last resort, load balacing, etc. )
+
+4) Keep documenting for project reference.
+
+5) Learn how to edit configuration of WiFi in a way that the parameters can be modified to use auto channel, different bandwidth, different bands.
+
+6) If routing issues are solved, try different precedence values for the eth0 and wlan0 gateways, so it can be manually forced.
+
+7) Start investigation into ZeroTier for remote access and VPN for the device from a remote location. No need to use DynDNS. This will create the 
+foundation for a Mosquito Mqtt server and publish/subscribe model for the IoT devices. 
+
+
