@@ -34,9 +34,9 @@ The specifications of the raspberry4b8GB can be see in the Hardwar folder of the
 
 As 5G chips are more expensive 250 dollars, compared to 25 dollars of WiFi6, this model of house/office router would allow a cheap solution as only one 5G Sub6Ghz chip has to be aquired is cheaper for the customer. It is the model of the CPE (Customer Premises Equipment) that is more economic for the customers, ad they can buy WiFi6 devices and connect the CPE for high speed data rates both in uplink and downlink.
 
-4.5G chips M.2 are have different categories with different max speeds in downlink and uplink and also have different cost gamma, so the customer offerings can be wide and it can also be easily upgraded for better chips, returning he old ones for other customers that require an entry level.
+4.5G chips M.2 are a Long Term Evolution option and have different categories with different max speeds in downlink and uplink and also have different cost gamma, so the customer offerings can be wide and it can also be easily upgraded for better chips, returning he old ones for other customers that require an entry level. They can also be upgrade to M.2 form factor 5G chips eventually when the National Operators networks migrate to Rel.15
 
-The routing has to be modified according with the option chosen and there should be a web interface to be able to reconfigure different options easily.
+The hardware of the raspberry will be used as a router and has to be modified according with a list of options for different setups and there should be a web interface to be able to reconfigure different options easily by the end user with no support.
 The options are mentioned in other files in depth. 
 
 Open Tier Systems will be used to create VPN network for private customers or companies and it also allows connectivity to the remote RaspberryPis for confiuration, update, support and also allow MQTT Server to be used to have the Raspberries subscribed to Topics in order to report information or other tasks like check connectivity, etc.
