@@ -1,0 +1,14 @@
+WiFi AP bridged to the wlan0 interface
+######################################
+
+I will try to replicate the configuration of the WiFi AP changing the parameters of the eth0 for the wlan0.
+
+It is important to mention that in the mobile network, the IP is provided by the vEPC and so it changes as well as the Default Gateway.
+This might add some thinking in how to resolve every time the modem is connected to the mobile network.
+
+I will copy in this section everything from the WiFi AP bridged into the eth0 and make changes accordingly.
+
+
+PRCOCEDURE
+##########
+
