@@ -32,7 +32,7 @@ GPS is included in the 4.5G/5G M.2 form factor chips.
 
 The specifications of the raspberry4b8GB can be see in the Hardwar folder of the repository.
 
-As 5G chips are more expensive 350 dollars, compared to 25 dollars of WiFi6, this model of house/office router would allow a cheap solution as only one 5G Sub6Ghz chip has to be aquired is desired.
+As 5G chips are more expensive 250 dollars, compared to 25 dollars of WiFi6, this model of house/office router would allow a cheap solution as only one 5G Sub6Ghz chip has to be aquired is desired.
 
 4.5G chips M.2 are have different categories with different max speeds in downlink and uplink and also have different cost gamma, so the customer offerings can be wide and it can also be easily upgraded for better chips, returning he old ones for other customers that require an entry level.
 
