@@ -4,7 +4,7 @@ At the moment there is only one develper working on the system development with 
 
 We can estimate 3 months initially to have a prototype with some configuration options and tested in production in real life scenarios
 with Shaggy antennas on the roof. For that we will use my house that is located 800 meters from the site and has some tree barriers that will 
-act degradding the LTE speeds, as well as the FTTH home service with a CAT.6 cables.
+act degradding the cell signal and it will be a good indicator in cases o forest in the line of sight. FTTH home service with a CAT.6 cables will also be used to test the speed of the Gigabitethernet.
 
 All the hardware has been purchased by me as there is no budget for this project officially at least at this stage.
 
