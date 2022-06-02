@@ -7,9 +7,13 @@ We were able to create a bridge between wiFi AP and Ethernet Gigabit interface, 
 The only roblem of this solution is that the RaspberriPi lost connectivity via the Ethernet. To solve this issue, the br0 interface to eth0 
 was deleted and it solves the issue, but leaves the AP with no internet. At the moment, this issue is not a major problem.
 
-Now the objective is to change the configuration files that were used to change eth0 by the usb modem interface. We list the interfaces in the system
-to start the process of replacing the configuration. The IP address of the LTE dongle is given by the vEPC mobile Core and it is not a fixed IP.
+Now one of the objectives, that are listed in the Project managment folder, is to change the configuration files that were used to 
+change eth0 by the usb M.2 form factor Huawei modem interface wlan. We list the interfaces in the system to start the process of 
+replacing the configuration. 
+
+The IP address of the LTE dongle is given by the vEPC mobile Core and it is not a fixed IP.
 That is a difference between the actual configuration in eth0 where the IP addressed was sticky to the MAC address of the eth0.
+We have to find a solution for this problem. The configuration 
 
 
 
