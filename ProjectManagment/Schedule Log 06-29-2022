@@ -1,0 +1,26 @@
+Project update:
+
+1. The Waveshare 4G/5G Hat for Raspberry arrived on Monday.
+2. The system was integrated with the Cat 6 Huawei M.2 Chip and it works fine with the HAT. The antenas are bigger, it can support 2 SIM CARDS.
+   The HAT has an extra power supply for stability and a fan for Raspi and Chip refrigeration.
+3. It was presented as a LTE device for 4.5G, LTE-M, NbIoT, 5G to the RAN team in ANTEL and they liked the concept.
+4. The Github 5GRouterRaspberrPi8GB was made public and itś available for collaboration under the GNU GPLv3 licences to anyone.
+5. Next week the Cat 16 Quectel module will be arriving, supporting up to 1Gbps download in lab environment. I will integrate it and 
+   run some test.
+6. I aquired two Yagi plastic antenas for installation in the roof at 90 degrees angle between them for space diversity. 
+7. Another email communication to URSEC was sent to try to push for a fast lane in the homologation of LTE and 5G chips for IoT. 
+8. The Waveshare HAT seems to be responding fine so far. IT seems a pretty stable application.
+
+
+Moving Forward:
+
+1. Install the new chip Quectel 160RM-GL M.2 and test it.
+2. Install the Yagi antennas in the roof and get the adecuate coaxial RG213 50 ohms.Price 165 uruguayan peso per meter.
+3. Buy the pig tail to adapt for the SMA Male in the HAT antenna connectors.
+4. Reconfigure the Gigabit Ethernet with DHCP and 1 IP for a laptop, as well as the DNS of google.
+5. The configuration to toute packets from the laptop to the WWAN0 has to be done changing the ipforwarding to 1:
+       root@raspberrypi:/proc/sys/net/ipv4# echo 1 > ip_forward
+       root@raspberrypi:/proc/sys/net/ipv4# cat ip_forward
+6. After that the Iptables, NAT and Masqarade have to be turned on in the internet interface:
+       iptable -t NAT -i wwan0 outgoing -j MASAQARADE
+7. At this stage the system should be able to give connectivity for the laptop and firewall should be considered to be configured.
