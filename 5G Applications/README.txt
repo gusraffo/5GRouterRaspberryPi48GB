@@ -1,13 +1,27 @@
+QUECTEL CHIPS PROVIDER
+######################
+
 https://www.quectel.com/5g-iot-modules
 
-Example 5G module M.2 sub 6GHz   https://www.quectel.com/product/5g-rm510q-gl
+Examples:
+#########
 
-Example 5G module M.2 sub 6gHz + mmWave  https://www.quectel.com/product/5g-rm510q-gl
+5G module M.2 sub 6GHz:   
+https://www.quectel.com/product/5g-rm510q-gl
 
+5G module M.2 sub 6gHz + mmWave:
+https://www.quectel.com/product/5g-rm510q-gl
+
+
+
+Quectel Brochure of all products that are available and the different form factos:
+##################################################################################
+
+https://www.quectel.com/wp-content/uploads/2022/04/Quectel_Product_Brochure_EN_V7.0.pdf
 
 
 List of trendy 5G applications:
-
+###############################
 
     AI robots
     AR/VR
@@ -26,7 +40,9 @@ List of trendy 5G applications:
     Smart cities
     Smart factories and manufacturing
     
-    
+
+5G modules description:
+#######################
 
 5G modules connect IoT devices to the cutting edge of cellular networks, with ultra-high data rates and ultra-low latency - enabling applications
 as diverse as remote surgery, autonomous driving, virtual reality gaming, AI-driven smart manufacturing and robotics.
