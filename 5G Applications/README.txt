@@ -1,5 +1,11 @@
 https://www.quectel.com/5g-iot-modules
 
+Example 5G module M.2 sub 6GHz   https://www.quectel.com/product/5g-rm510q-gl
+
+Example 5G module M.2 sub 6gHz + mmWave  https://www.quectel.com/product/5g-rm510q-gl
+
+
+
 List of trendy 5G applications:
 
 
