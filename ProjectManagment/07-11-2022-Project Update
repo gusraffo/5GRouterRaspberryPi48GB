@@ -1,0 +1,64 @@
+From previous update
+
+1. Install the new chip Quectel 160RM-GL M.2 and test it.
+
+Chip delayed. It will arrive this week.
+
+2. Install the Yagi antennas in the roof and get the adecuate coaxial RG213 50 ohms.Price 165 uruguayan peso per meter.
+
+Still need the 50 ohms cable coaxial and the connectors. Antenna setup will be changed for a camera tripod at the floor level
+to help move the setup to different environments for testing purposes. The roof idea is ok but is only for one place so it
+doesn't allow for mobility.
+
+3. Buy the pig tail to adapt for the SMA Male in the HAT antenna connectors.
+
+Still haven't aquire the connectors
+
+4. Reconfigure the Gigabit Ethernet with DHCP and 1 IP for a laptop, as well as the DNS of google.
+
+This worked fined once. Then there was a configuration issue. Had to revert to factory the SD card. 
+ 
+The dhcp can be changed for fixed configuration and the eth0 can be statically configured in etc/interfaces.
+
+The laptop has to be configured accordingly with ip, mask, gateway and dns.
+
+It worked at some stage but then it didn't. Just a small change and then there was no way to get it back up.
+
+5. The configuration to toute packets from the laptop to the WWAN0 has to be done changing the ipforwarding to 1:
+       root@raspberrypi:/proc/sys/net/ipv4# echo 1 > ip_forward
+       root@raspberrypi:/proc/sys/net/ipv4# cat ip_forward
+       
+IP Forwarding can be changed in /etc/sysctl.conf file.       
+       
+6. After that the Iptables, NAT and Masqarade have to be turned on in the internet interface:
+       iptable -t NAT -i wwan0 outgoing -j MASAQARADE
+       
+This is only for the NAT but it needs to connect the interfaces in both directions aswell with a couple of lines.
+
+It also needs iptables-persistent software to be able to save the configuration after reboot.
+
+
+7. At this stage the system should be able to give connectivity for the laptop and firewall should be considered to be configured.
+Footer
+
+I did't worked on the firewall yet. The ports are open I assume. Don't know even what firewall is operating on Raspbian yet.
+
+
+
+Moving Forward:
+
+1. The previous points need review and put into action.
+
+2. There was an issue in the testing when the eth0 was forwarding to the wwan0 modem. It seems that the upload/download speed suffers some
+loss and is reduced. This needs to be investigated. Maybe there is a workaround, creating a tunnel directly from eth0 to wwan0. In this way
+it might be easier.
+
+3. The modem manager accepts command lines via de mmcli and is very broad in options. The bands that can be used by the modem can be defined here.
+This could be very important to activate all the bands for 5 carriers in carrier aggregation for the EM160-GL Quectel Cat-16 module, that
+can get speeds up to 1Gbps in lab environment.
+
+
+
+
+
+
