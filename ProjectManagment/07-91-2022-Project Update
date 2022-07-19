@@ -1,0 +1,126 @@
+Comments in the previous update.
+
+
+1. Install the new chip Quectel 160RM-GL M.2 and test it.
+
+UPDATE: Chip arrived, was installed and tested.
+
+Raspbian with modemmanager does not connect to internet.
+
+Ubuntu 22.04 was tested for packet network connectivity. It comes with a kernel that connects to modems without the need
+of modemmanager. It was tested and it works fine.
+
+In terms of speed of download and upload, considering it´s a Cat-16, testing under the site does not go over 50Mbps download. But
+it was compared to the iPhone SE 2020 which is also a Cat-16 and it has the same behaviour.
+
+A drive test with the iPhone showed that the "adsl test" page was not reflecting the network maximum capacity. The iPhone was
+tested with the OOkla Speed Test App and it reached 150Mbps 3 blocks from the site in the street. 
+
+Ookla does not work in Linux, but a speed test command line app was downloaded and it was tested under the site. 
+
+
+
+2. Install the Yagi antennas in the roof and get the adecuate coaxial RG213 50 ohms.Price 165 uruguayan peso per meter.
+
+Still need the 50 ohms cable coaxial and the connectors. Antenna setup will be changed for a camera tripod at the floor level
+to help move the setup to different environments for testing purposes. The roof idea is ok but is only for one place so it
+doesn't allow for mobility.
+
+UPDATE: We solved the Yagi antennas in a different way. The two antennas were installed at +45 degrees and -45 degrees in a cammera tripod at the ground
+level and not on the roof.
+
+The cables and pigtails were provided temporarily by other area to carry on testing. They were succesfully connected but not tested yet.
+
+
+
+3. Buy the pig tail to adapt for the SMA Male in the HAT antenna connectors.
+
+Still haven't aquire the connectors
+
+
+UPDATE: pigtails were provided by another area and they will be tested soon.
+
+
+
+4. Reconfigure the Gigabit Ethernet with DHCP and 1 IP for a laptop, as well as the DNS of google.
+
+This worked fine once. Then there was a configuration issue. Had to revert to factory the SD card. 
+ 
+The dhcp can be changed for fixed configuration and the eth0 can be statically configured in etc/interfaces.
+
+The laptop has to be configured accordingly with ip, mask, gateway and dns.
+
+It worked at some stage but then it didn't. Just a small change and then there was no way to get it back up.
+
+
+UPDATE: We will soon change the OS to the OpenWRT with LUCi. The main processor of the Raspberry with all the OS and GUI is
+not performing at the level it should in the packet forwarding point of view. 
+
+There is a reduction in the speed provided to the laptop connected in the Gigabit Ethernet compared to the speed in the Raspberry
+and we estimate the procesing capacity of the Raspberry microprocessor is the cause. That is why we will work on the build up 
+of an OpenWRT router. It was not fully in the plans before, as the different components of hardware of the system was the priority.
+
+Now that the system is completed from the hardware point of view, with the Raspberry Pi 4 8GB, the Waveshare 5G HAT, the 4.5G Quectel module,
+the Yagi, coaxial and pigtails, the next phase will include testing with Ubuntu 22.04 and then with OpenWRT. As the Raspberry allows
+quick change of micro SD memory cards, the two OS can be tested just by changing the SD card.
+
+
+5. The configuration to to route packets from the laptop to the WWAN0 has to be done changing the ipforwarding to 1:
+       root@raspberrypi:/proc/sys/net/ipv4# echo 1 > ip_forward
+       root@raspberrypi:/proc/sys/net/ipv4# cat ip_forward
+       
+IP Forwarding can be changed in /etc/sysctl.conf file.    
+
+NO UPDATE
+       
+6. After that the Iptables, NAT and Masqarade have to be turned on in the internet interface:
+       iptable -t NAT -i wwan0 outgoing -j MASAQARADE
+       
+This is only for the NAT but it needs to connect the interfaces in both directions as well with a couple of lines.
+
+It also needs iptables-persistent software to be able to save the configuration after reboot.
+
+NO UPDATE: We will wait for the OpenWRT system to configure all this software routing issues.
+
+
+
+7. At this stage the system should be able to give connectivity for the laptop and firewall should be considered to be configured.
+
+
+I did't worked on the firewall yet. The ports are open I assume. Don't know even what firewall is operating on Raspbian yet.
+
+NO UPDATE
+
+
+
+Moving Forward last week:
+#########################
+
+1. A lot of progress was made last week with the arrival of the Quectel module and the antennas setup.
+
+
+
+2. The packet forwarding between eth0 and wwan0 should be improved in OpenWRT due to reduced processor load due to OS and GUI in OpenWRT compared
+to the Ubuntu 22.04 Desktop OS.
+
+
+
+3. The modem manager accepts command lines via de mmcli and is very broad in options. The bands that can be used by the modem can be defined here.
+This could be very important to activate all the bands for 5 carriers in carrier aggregation for the EM160-GL Quectel Cat-16 module, that
+can get speeds up to 1Gbps in lab environment.
+
+UPDATE: We will first test OpenWRT.
+
+
+Moving forward this week:
+#########################
+
+1. Test Yagi setup with the Quectel module in my house 800 meters from the site in order to see the order of the speeds it can reach.
+
+2. Start the research in building a router with OpenWRT and LUCi. Basic configuration and add-on functionalities.
+
+3. Configure in 
+
+
+
+
