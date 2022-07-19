@@ -119,7 +119,45 @@ Moving forward this week:
 
 2. Start the research in building a router with OpenWRT and LUCi. Basic configuration and add-on functionalities.
 
-3. Configure in 
+3. Configure in Ubuntu packet forwarding to Gigabit Ethernet.
+
+4. Start the conversations to test the system in lab environment with all the bands of LTE and Carrier Aggregation on to see how
+fast the modem can download and upload in the lab. We don't expect to reach 1Gbps on the download and 150Mbps on the Upload
+but at least 400Mbps.
+
+5. In the testing environment with Yagi antennas and being 800 meters from the RBS, the speed of 100Mbps/50Mbps will be more than
+succesfull in Ubuntu 22.04. If we can't achieve this, we will move to OpenWRT testing inmediatly, as the objective of this project
+is to build a Router for rural areas with 4.5 LTE-Advanced Pro features and upgradable to 5G in the 2600MHz band, 3.5Ghz band.
+
+
+5G MODULES M.2 UPDATE:
+######################
+
+1. There is a big issue regarding 5G M.2 modules. Las year the price was between 250 dollars and 300 dollars. Due to chip shortage
+the cost of this modules have gone up by more than 100% reaching 600 dollars in some cases + shipment.
+
+2. For our project we wanty to reduce the cost of the system to the maximum, taking into consideration that rural areas will in a lot
+of cases require an external antenna array of 2 Yagi antennas. This adds a cost of 300 dollars for the two antennas + the coaxial cables 
+and pigtails, so it may be between 400 and 500 dollars only for the antenna system. Of course that is not the case for all the cases
+and a configuration with only one antenna might be a half price affordable opion of around 200 to 225 dollars.
+
+3. In a lot of cases the customers will use WiFi 802.11ac connecting their devices, specially mobile devices to the Raspberry WiFi AP. In order
+to allow a good speed at 50 meters away or indoor in a medium size house, the 20MHz channel should be configured instead of the 40MHz. this will
+limit to 54Mbps close to the AP. In this configuration, the Router will be good enough with 50Mbps download speed.
+
+4. For the case when a laptop or other device is connected using dhcp to the Gigabit Ethernet, faster speeds can be reached. This will require 
+a better connectivity in the LTE modem. 
+
+5. If a hybrid connection of mobile devices to WiFi and another device to the LAN will be used a faster speed is required.
+
+6. We don't have still 5G applications that will require higher speed order of more than 100Mbps/50Mbps but if a cell is congested due to 
+high traffic or high number of users, we will require 5G capacity in the cell to reach these speeds. But it is important to notice that 5G
+will be turned on the 2600MHz band and due to attenuation in that frequency range, only customers that are relatively close to the cell will
+be able to reach high order speeds. 
+
+7. 
+
+
 
 
 
